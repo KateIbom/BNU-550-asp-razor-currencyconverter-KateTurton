@@ -21,5 +21,10 @@ namespace RazorcurrenceyConvertor.Pages
         {
 
         }
+
+        public void OnPost()
+        {
+
+        }
     }
 }
