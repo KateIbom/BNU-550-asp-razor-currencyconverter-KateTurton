@@ -1,0 +1,26 @@
+﻿@page
+@model RazorcurrenceyConvertor.Pages.CurrenceyConvertorModel
+@{
+   
+}
+<div>
+    <p></p>
+    <form method="post">
+        Convert :
+        <div class=" rounded">
+            <input type="number" asp-for="@Model.Amount" name="Amount" />
+
+            <select asp-for="@Model.Currency">
+                <option value="Euros">Euros</option>
+                <option value="Pounds">Pounds</option>
+            </select>
+        </div>
+
+        <p> @ViewData["Result"] </p>
+
+        <p>
+            <button class=" btn btn-success" input type="submit">Calculate</button>
+        </p>
+    </form>
+</div>
+
