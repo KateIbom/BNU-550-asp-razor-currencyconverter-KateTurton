@@ -12,6 +12,9 @@ namespace RazorcurrenceyConvertor.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
+        
+        public String FullName { get; set; }
+
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
@@ -24,6 +27,18 @@ namespace RazorcurrenceyConvertor.Pages
 
         public void OnPost()
         {
+            this.FullName = Request.Form["name"];
+
+            if (String.IsNullOrWhiteSpace(FullName))
+            {
+                ViewData["Message"] = " ";
+            }
+            else
+            {
+                ViewData["Message"] = FullName + " registered successfully!";
+            }
+
+
 
         }
     }
